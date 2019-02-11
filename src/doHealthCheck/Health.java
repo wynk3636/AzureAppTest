@@ -1,4 +1,4 @@
-package servlet;
+package doHealthCheck;
 //JavaBeansのモデル
 
 /* JavaBeansのルール
@@ -10,6 +10,8 @@ package servlet;
 */
 import java.io.Serializable;
 
+//JSPで受け取る為にSerializableインターフェースの実装
+//インスタンスのフィールドの内容をバイト列に変換してファイルなどに保存して、それをまたインスタンスに復元する技術
 @SuppressWarnings("serial")
 public class Health implements Serializable {
 	//privateカプセル化

@@ -11,8 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlet.Health;
-import servlet.HealthCheckLogic;
+import doHealthCheck.Health;
+import doHealthCheck.HealthCheckLogic;
+import useSql.HealthSQL;
 
 @WebServlet("/HealthCheck") //URLパターン（/クラス名）
 public class HealthCheck extends HttpServlet {
@@ -38,6 +39,7 @@ public class HealthCheck extends HttpServlet {
     Health health = new Health();
     health.setHeight(Double.parseDouble(height)); //文字列を数値へ変換
     health.setWeight(Double.parseDouble(weight)); //文字列を数値へ変換
+    
     //健康診断を実行し結果を設定
     HealthCheckLogic healthCheckLogic = new HealthCheckLogic();
     /* インスタンスの引数
@@ -47,7 +49,7 @@ public class HealthCheck extends HttpServlet {
      */
     healthCheckLogic.execute(health); //healthCheckLogicのexecuteメソッド呼び出し
     
-    SQLExecution sqlExecution = new SQLExecution();
+    HealthSQL sqlExecution = new HealthSQL();
     sqlExecution.insert(health);
 
     //リクエストスコープに保存(setAttributeメソッド)

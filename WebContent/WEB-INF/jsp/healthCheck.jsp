@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="servlet.Health" %>
+<%@ page import="doHealthCheck.Health" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@
 					 <input type="submit" value="診断">
 			</form>
 			<br><br><hr>
-			<a href="index.html">戻る</a>
+			<a href="./">戻る</a>
 		</div>
 	</div>
 </body>
