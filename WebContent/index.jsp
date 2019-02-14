@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>ようこそ！</h1>
+			<h1>ようこそ!!</h1>
 		</header>
 		<div class ="content">
 			<a href="HealthCheck">健康診断</a><br>
