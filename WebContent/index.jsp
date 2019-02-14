@@ -14,8 +14,8 @@
 			<h1>ようこそ！</h1>
 		</header>
 		<div class ="content">
-			<a href="HealthCheck">・健康診断</a><br>
-			<a href="RegisterUser">・ユーザ登録</a>
+			<a href="HealthCheck">健康診断</a><br>
+			<a href="RegisterUser">ユーザ登録</a>
 			<form action="Login" method="post">
 				ユーザー名：<input type ="text" name="name"><br>
 				パスワード：<input type ="password" name="pass"><br>
